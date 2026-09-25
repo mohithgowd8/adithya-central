@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-burgundy: #641C2B;
+    --color-burgundy-deep: #45131F;
+    --color-ivory: #F8F3EA;
+    --color-cream: #EFE7DA;
+    --color-gold: #C6A15B;
+    --color-charcoal: #252525;
+    --color-muted-brown: #6D5A4A;
+  }
+
+  body {
+    background-color: var(--color-ivory);
+    color: var(--color-charcoal);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Playfair Display', serif;
+  }
+
+  /* Form Elements Crisp Legibility Fix */
+  input, select, textarea {
+    color: #150407 !important;
+    font-weight: 600 !important;
+  }
+
+  input::placeholder, textarea::placeholder {
+    color: #7A6B65 !important;
+    font-weight: 400 !important;
+  }
+
+  select option {
+    background-color: #FFFFFF !important;
+    color: #150407 !important;
+    font-weight: 600 !important;
+    padding: 8px !important;
+  }
+}
+
+/* Custom Utilities & Animations */
+.glass-burgundy {
+  background: rgba(100, 28, 43, 0.92);
+  backdrop-filter: blur(12px);
+}
+
+.glass-nav-scrolled {
+  background: rgba(248, 243, 234, 0.96);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 4px 20px -2px rgba(37, 37, 37, 0.08);
+}
+
+/* Smooth custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #EFE7DA;
+}
+::-webkit-scrollbar-thumb {
+  background: #641C2B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #45131F;
+}
+
+/* Gold Accent Border Pattern */
+.border-gold-accent {
+  border-color: rgba(198, 161, 91, 0.3);
+}
+
+.hover-gold-glow:hover {
+  box-shadow: 0 10px 30px -5px rgba(198, 161, 91, 0.25);
+}
+
+/* Image Zoom Hover Utility */
+.img-zoom-container {
+  overflow: hidden;
+}
+.img-zoom-container img {
+  transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.img-zoom-container:hover img {
+  transform: scale(1.05);
+}
