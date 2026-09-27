@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, Mail, Clock, Instagram, Facebook, Youtube, Heart, ExternalLink } from 'lucide-react';
+import { MapPin, Phone, Clock, Instagram, Heart, ExternalLink } from 'lucide-react';
 import { RESTAURANT_HIGHLIGHTS } from '../../data/restaurant';
 
 export default function Footer() {
@@ -34,14 +34,14 @@ export default function Footer() {
             </p>
             {/* Social Links */}
             <div className="flex items-center gap-3 pt-2">
-              <a href="#" aria-label="Instagram" className="w-9 h-9 rounded-full bg-burgundy/60 border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-burgundy-dark transition-all">
+              <a
+                href="https://www.instagram.com/adithya_central_elr?stkn=MXhibnc0ZGtlY25i"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="w-9 h-9 rounded-full bg-burgundy/60 border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-burgundy-dark transition-all"
+              >
                 <Instagram className="w-4 h-4" />
-              </a>
-              <a href="#" aria-label="Facebook" className="w-9 h-9 rounded-full bg-burgundy/60 border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-burgundy-dark transition-all">
-                <Facebook className="w-4 h-4" />
-              </a>
-              <a href="#" aria-label="YouTube" className="w-9 h-9 rounded-full bg-burgundy/60 border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-burgundy-dark transition-all">
-                <Youtube className="w-4 h-4" />
               </a>
             </div>
           </div>
@@ -121,10 +121,6 @@ export default function Footer() {
                   <a href="tel:7997888869" className="hover:text-gold transition-colors font-semibold">+91 79978 88869 (Catering)</a>
                   <a href="tel:9391253999" className="hover:text-gold transition-colors text-ivory-cream/70">+91 93912 53999 (Hotel Desk)</a>
                 </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-gold shrink-0" />
-                <a href="mailto:info@adithyacentral.com" className="hover:text-gold transition-colors text-xs">info@adithyacentral.com</a>
               </div>
               <div className="flex items-center gap-3">
                 <Clock className="w-4 h-4 text-gold shrink-0" />

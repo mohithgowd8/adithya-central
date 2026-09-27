@@ -42,7 +42,9 @@ export default function PhotoStorySection() {
 
         <div className="mt-8 text-center">
           <a
-            href="#instagram"
+            href="https://www.instagram.com/adithya_central_elr?stkn=MXhibnc0ZGtlY25i"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-burgundy text-ivory border border-gold text-xs uppercase tracking-[0.2em] font-semibold hover:bg-gold hover:text-burgundy-deep transition-all shadow-md"
           >
             <Instagram className="w-4 h-4 text-gold group-hover:text-burgundy-deep" />

@@ -20,8 +20,8 @@ export default function Home() {
   return (
     <main className="w-full">
       <MetaSEO
-        title="Adithya Central | Catering, Banquets & Restaurant - Eluru"
-        description="Adithya Central offers premium catering, banquet venues (Aarna Banquets / Arna Kalyana Vedhi), restaurant dining and event experiences in Eluru."
+        title="Hotel Adithya Central Eluru | Adhitya Central Banquets & Restaurant"
+        description="Welcome to Hotel Adithya Central (Adhitya Central), Eluru. Luxury banquet halls (Aarna Banquets, Achuta Banquet), fine restaurant dining, and catering in Eluru, Andhra Pradesh."
       />
 
       {/* SECTION 1 — HERO */}

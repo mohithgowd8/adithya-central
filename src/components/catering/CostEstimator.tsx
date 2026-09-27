@@ -6,7 +6,8 @@ export default function CostEstimator() {
   const [guests, setGuests] = useState(300);
   const [eventType, setEventType] = useState('Wedding / Muhurtham');
   const [menuType, setMenuType] = useState('Royal South Indian Feast');
-  const [venueChoice, setVenueChoice] = useState('Aarna Banquets & Cuisines');
+  const [venueChoice, setVenueChoice] = useState('Aarna Banquets & Cuisines (Eluru)');
+  const [customAddress, setCustomAddress] = useState('');
 
   const menuOptions = [
     {
@@ -27,8 +28,11 @@ export default function CostEstimator() {
   ];
 
   const handleWhatsAppQuote = () => {
-    const message = `Hello Adithya Central,%0A%0AI would like a formal quote for my upcoming event:%0A- Event Type: ${eventType}%0A- Guest Count: ${guests} Guests%0A- Menu Package: ${menuType}%0A- Venue / Location: ${venueChoice}%0A%0APlease share menu details and date availability.`;
-    window.open(`https://wa.me/917997888869?text=${message}`, '_blank');
+    const venueText = venueChoice === 'Other'
+      ? (customAddress.trim() ? `Other (${customAddress.trim()})` : 'Other (Address to be specified)')
+      : venueChoice;
+    const text = `Hello Adithya Central,\n\nI would like a formal quote for my upcoming event:\n- Event Type: ${eventType}\n- Guest Count: ${guests} Guests\n- Menu Package: ${menuType}\n- Venue / Location: ${venueText}\n\nPlease share menu details and date availability.`;
+    window.open(`https://wa.me/917997888869?text=${encodeURIComponent(text)}`, '_blank');
   };
 
   return (
@@ -108,7 +112,23 @@ export default function CostEstimator() {
               <option value="Aarna Banquets & Cuisines (Eluru)">Aarna Banquets & Cuisines (5th Floor, Central Plaza)</option>
               <option value="Achyutha Banquets & Cuisines (Eluru)">Achyutha Banquets & Cuisines (2nd Floor, Central Plaza)</option>
               <option value="Outdoor Catering at Client Venue">Adithya Outdoor Catering (At Your Venue)</option>
+              <option value="Other">Other</option>
             </select>
+
+            {venueChoice === 'Other' && (
+              <div className="mt-3">
+                <label className="block text-xs uppercase tracking-wider font-bold text-burgundy-deep mb-1.5">
+                  Enter Address / Location:
+                </label>
+                <input
+                  type="text"
+                  value={customAddress}
+                  onChange={(e) => setCustomAddress(e.target.value)}
+                  placeholder="Enter your default address / venue location"
+                  className="w-full px-4 py-3 bg-white text-[#150407] font-medium text-sm sm:text-base border border-gold/60 focus:border-burgundy rounded-lg shadow-sm placeholder:text-charcoal/50"
+                />
+              </div>
+            )}
           </div>
 
         </div>
