@@ -48,7 +48,7 @@ export default function PhotoStorySection() {
             className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-burgundy text-ivory border border-gold text-xs uppercase tracking-[0.2em] font-semibold hover:bg-gold hover:text-burgundy-deep transition-all shadow-md"
           >
             <Instagram className="w-4 h-4 text-gold group-hover:text-burgundy-deep" />
-            <span>@ADITHYACENTRAL</span>
+            <span>@ADITHYA_CENTRAL_ELR</span>
           </a>
         </div>
 
